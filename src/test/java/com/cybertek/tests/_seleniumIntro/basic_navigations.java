@@ -1,4 +1,4 @@
-package com.cybertek.tests.day_1;
+package com.cybertek.tests._seleniumIntro;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +11,10 @@ public class basic_navigations {
 
         //2)- create instance of selenium web driver
         WebDriver driver= new ChromeDriver();
+
+        // some web pages change according to their size in dev language its caller responsive pages, so its important to maximize
+        driver.manage().window().maximize();
+       // driver.manage().window().fullscreen(); only for MAC make the window full screen
 
         driver.get("http://www.tesla.com");
 
@@ -39,6 +43,15 @@ public class basic_navigations {
 
         // provide the title of the web page and return Sting title
         System.out.println("current title "+driver.getTitle());
+        currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+        // maximizing the chrome browser window
+
+        //this method will close  the currently opened browser
+        //will close only 1 browser or tab
+        driver.close();
+        //driver.quit(); will close all of the opened browsers or tabs within the session.
+
 
     }
 }
