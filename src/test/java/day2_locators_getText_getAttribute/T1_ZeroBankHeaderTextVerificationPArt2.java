@@ -27,6 +27,7 @@ public class T1_ZeroBankHeaderTextVerificationPArt2 {
         if(ActualAttribute.contains(expectedAttributeValue)){
             System.out.println("Verification completed, status: PASSED!");
         }else{System.out.println("Verification completed, status: FAILED!");}
+        driver.close();
     }
 }
 
