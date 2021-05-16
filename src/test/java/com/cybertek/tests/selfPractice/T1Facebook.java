@@ -1,4 +1,4 @@
-package com.selfPractice;
+package com.cybertek.tests.selfPractice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -24,7 +24,9 @@ public class T1Facebook {
          WebElement mail =driver.findElement(By.name("email"));
          mail.sendKeys("Vladislav13457@gmail.com");
          WebElement pass= driver.findElement(By.name("pass"));
-         pass.sendKeys("1DONTLOVElERA"+ Keys.ENTER);
+         //alt+enter for windows to create shortcut for the name of WebDriver
+         Thread.sleep(3000);
+         pass.sendKeys("1loveLera"+ Keys.ENTER);
          actualTitle =driver.getTitle();
          expectedTitle ="Log into Facebook | Facebook";
          if(expectedTitle.equals(actualTitle)){
